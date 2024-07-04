@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="text-[10px]">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-orange-300 m-0 p-0 box-border text-white flex flex-col gap-[4rem]">
+  <!-- Header Element -->
+   <header class="header p-[2rem] flex justify-between items-center">
+    <div class="title text-[3rem]">
+        <h2>Item Container</h2>
+    </div>
+    <div class="search-box w-[50%] text-right">
+        <input type="text" placeholder="Search..." class="py-[1rem] px-[2rem] rounded-lg w-[30%]">
+    </div>
+   </header>
+
+   <!-- Shopping Container -->
+
+   <div class="shopping-container gray-border w-[70%] m-auto p-[3rem] rounded-lg">
+    <div class="top-container flex flex-col gap-[1rem] text-[2rem]">
+        <h3>Add Items</h3>
+        <div class="add-items">
+            <input type="text" class="input-items">
+            <button id="submit">Submit</button>
+        </div>
+        <div class="items-container">
+            <h3 class="text-gray-500 capitalize text-[3rem]">Items</h3>
+            <ul class="gray-border p-[2rem] rounded-sm flex flex-col gap-[1rem]">
+                <div class="flex justify-between items-center">
+                    <li class="uppercase text-green-600">Item</li>
+                    <button class="bg-red-500 px-[2rem] py-[1rem] rounded-lg">Delete</button>
+                </div>
+                <div class="flex justify-between items-center">
+                    <li class="uppercase text-green-600">Item</li>
+                    <button class="bg-red-500 px-[2rem] py-[1rem] rounded-lg">Delete</button>
+                </div>
+                <div class="flex justify-between items-center">
+                    <li class="uppercase text-green-600">Item</li>
+                    <button class="bg-red-500 px-[2rem] py-[1rem] rounded-lg">Delete</button>
+                </div>
+                <div class="flex justify-between items-center">
+                    <li class="uppercase text-green-600">Item</li>
+                    <button class="bg-red-500 px-[2rem] py-[1rem] rounded-lg">Delete</button>
+                </div>
+            </ul>
+        </div>
+    </div>
+   </div>
+</body>
+</html>

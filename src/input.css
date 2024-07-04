@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+    .test-red{
+        border: 1px solid red;
+    }
+    .test-green{
+        border: 1px solid green;
+    }
+    .test-blue{
+        border: 1px solid blue;
+    }
+    .gray-border{
+        border: 1px solid gray;
+    }
+}
