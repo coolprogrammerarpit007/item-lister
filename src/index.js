@@ -16,7 +16,7 @@ addBtn.addEventListener(`click`, (e) => {
   html = ``;
   html = `
         <div class= "flex justify-between items-center" id = item-${count}>
-          <li class="uppercase text-green-600">${inputEl.value}</li> 
+          <li class="uppercase text-green-600 item">${inputEl.value}</li> 
           <button class="bg-red-500 px-[2rem] py-[1rem] rounded-lg del-btn" data-item-name = item-${count}>Delete</button>
         </div>
     `;
@@ -44,3 +44,28 @@ addBtn.addEventListener(`click`, (e) => {
     })
   })
 });
+
+
+// Adding the search tasks functuanility
+
+const searchItem = document.querySelector(`#search-item`);
+
+
+// Adding event listener to the searchItem functuanility.
+
+searchItem.addEventListener(`keydown`,(e)=>{
+  const items = document.querySelectorAll(`.item`);
+  
+  // console.log(items);
+  // itterating over items
+  items.forEach((item) =>{
+    if(item.innerText.toLowerCase().includes(searchItem.value.toLowerCase())){
+      item.classList.remove(`hidden`);
+      item.classList.add(`block`);
+    }
+    else{
+      item.classList.remove(`block`);
+      item.classList.add(`hidden`);
+    }
+  })
+})
