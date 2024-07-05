@@ -24,6 +24,7 @@ addBtn.addEventListener(`click`, (e) => {
   shoppingContainer.innerHTML += html;
   count++;
 
+  inputEl.value = ``;
 
   // Acessing the delete btn
 
