@@ -29,43 +29,43 @@ addBtn.addEventListener(`click`, (e) => {
   // Acessing the delete btn
 
   const delBtns = document.querySelectorAll(`.del-btn`);
-  
-  delBtns.forEach((btn)=>{
-    btn.addEventListener(`click`,function(e){
+
+  delBtns.forEach((btn) => {
+    btn.addEventListener(`click`, function (e) {
       let id = btn.dataset.itemName;
       console.log(id);
       let el = document.querySelector(`#${id}`);
-      if(el){
+      if (el) {
         el.remove();
-      }
-      else{
+      } else {
         console.log(`${el} does not exist!`);
       }
-    })
-  })
+    });
+  });
 });
-
 
 // Adding the search tasks functuanility
 
 const searchItem = document.querySelector(`#search-item`);
 
-
 // Adding event listener to the searchItem functuanility.
 
-searchItem.addEventListener(`keydown`,(e)=>{
+searchItem.addEventListener(`keyup`, (e) => {
   const items = document.querySelectorAll(`.item`);
-  
-  // console.log(items);
+
+  console.log(items);
   // itterating over items
-  items.forEach((item) =>{
-    if(item.innerText.toLowerCase().includes(searchItem.value.toLowerCase())){
-      item.classList.remove(`hidden`);
+  items.forEach((item) => {
+    if (
+      item.innerText.toLowerCase().includes(searchItem.value.toLowerCase())
+    ) {
+      item.parentElement.classList.remove(`hidden`);
+      item.classList.remove("hidden");
       item.classList.add(`block`);
-    }
-    else{
-      item.classList.remove(`block`);
+    } else {
+      item.parentElement.classList.add(`hidden`);
+      item.classList.remove("block");
       item.classList.add(`hidden`);
     }
-  })
-})
+  });
+});
